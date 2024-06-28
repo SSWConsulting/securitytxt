@@ -1,0 +1,38 @@
+# SSW security.txt Setup
+
+First make sure you have a GPG tool installed. If you are on Windows, you can use Gpg4win. If you are on Mac, you can use GNU Privacy Guard.
+
+For Windows, you can download Gpg4win from [here](https://gpg4win.org/download.html).
+
+For Mac, you can download GNU Privacy Guard from [here](https://gnupg.org/download/index.html), or install with brew using
+
+```bash
+brew install gnupg
+```
+
+## Generate key
+
+1. `gpg --full-generate-key`
+2. Select RSA
+3. Select 4096
+4. Specify `13m` for key expiration, we want the key to expire after 13 months but will renew it for 1 July each year
+5. Enter name and email as **SSW** and **security@ssw.com.au**
+6. Enter passphrase (store this in keeper)
+7. `gpg --armor --export security@ssw.com.au > public_key.asc`
+8. `gpg --armor --export-secret-keys security@ssw.com.au > private_key.asc`
+9. Upload private_key.asc to Keeper
+10. Get a fingerprint for the security.txt file by running `gpg --list-keys --fingerprint security@ssw.com.au`
+11. Upload public_key.asc alongside the security.txt file on websites at /.well-known/security.txt and /.well-known/public_key.asc
+
+## Import key
+
+1. Download private_key.asc from Keeper
+2. `gpg --import path/to/private_key.asc` (use the passphrase from Keeper)
+
+## Decrypting a message
+
+1. `gpg --decrypt path/to/encrypted_file.gpg`
+
+## Sample security.txt
+
+To see a sample file look in `.well-known/security.txt` in this repository.
