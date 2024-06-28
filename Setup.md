@@ -14,6 +14,8 @@ brew install gnupg
 
 **NOTE:** You only need to generate a new key if the current key is expired or compromised. Use the files in the `.well-known` directory.
 
+This process should only be performed by the SSW Security Masters or SSW Sys Admins. For everyone else, please refer to the existing key in the `.well-known` directory
+
 1. `gpg --full-generate-key`
    1. Select RSA
    2. Select 4096
