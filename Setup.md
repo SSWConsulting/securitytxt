@@ -24,10 +24,10 @@ brew install gnupg
 4. Upload private_key.asc to Keeper (search for `security.txt`, speak to SSW SysAdmin for access)
 5.  Upload the public_key.asc to [keys.openpgp.org](https://keys.openpgp.org/) and verify the key
 6.  Get a fingerprint for the security.txt file by running `gpg --list-keys --fingerprint security@ssw.com.au`
-7.  Update the `.well-known` files with the 
-    1.  Fingerprint
-    2.  Expiration date
-    3.  Public key
+7.  Update the files in the `.well-known` directory with the 
+    1.  Fingerprint (property)
+    2.  Expiration date (property)
+    3.  Public key (file)
 8.  Upload public_key.asc alongside the security.txt file on websites at /.well-known/security.txt and /.well-known/public_key.asc
 
 ## Import key
