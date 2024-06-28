@@ -21,8 +21,9 @@ brew install gnupg
 7. `gpg --armor --export security@ssw.com.au > public_key.asc`
 8. `gpg --armor --export-secret-keys security@ssw.com.au > private_key.asc`
 9. Upload private_key.asc to Keeper
-10. Get a fingerprint for the security.txt file by running `gpg --list-keys --fingerprint security@ssw.com.au`
-11. Upload public_key.asc alongside the security.txt file on websites at /.well-known/security.txt and /.well-known/public_key.asc
+10. Upload the public_key.asc to [keys.openpgp.org](https://keys.openpgp.org/) and verify the key
+11. Get a fingerprint for the security.txt file by running `gpg --list-keys --fingerprint security@ssw.com.au`
+12. Upload public_key.asc alongside the security.txt file on websites at /.well-known/security.txt and /.well-known/public_key.asc
 
 ## Import key
 
