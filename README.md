@@ -2,6 +2,8 @@
 
 This repository provides a simple way to get started with implementing a security.txt file for your website or web application.
 
+**NOTE:** We use the same `security.txt` and `public_key.asc` for all our websites, you can find these files in the `.well-known` directory.
+
 ## Key Features
 
 *   `.well-known/security.txt`: A sample security.txt file to help you create your own.

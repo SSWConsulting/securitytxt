@@ -12,6 +12,8 @@ brew install gnupg
 
 ## Generate key
 
+**NOTE:** You only need to generate a new key if the current key is expired or compromised. Use the files in the `.well-known` directory.
+
 1. `gpg --full-generate-key`
    1. Select RSA
    2. Select 4096
